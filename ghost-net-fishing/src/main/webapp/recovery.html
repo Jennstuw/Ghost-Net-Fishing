@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Recovery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .net-details {
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        .net-details p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .net-details strong {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .back-link {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚢 Register for Ghost Net Recovery</h1>
+
+        <div class="net-details">
+            <h3>Net Details</h3>
+            <p><strong>Net ID:</strong> #<span th:text="${net.id}"></span></p>
+            <p><strong>Location:</strong> <span th:text="${net.locationString}"></span></p>
+            <p><strong>Size:</strong> <span th:text="${net.estimatedSize} + ' m²'"></span></p>
+            <p><strong>Reported:</strong> <span th:text="${#temporals.format(net.reportedDate, 'dd.MM.yyyy HH:mm')}"></span></p>
+        </div>
+
+        <form th:action="@{/nets/register/{id}(id=${net.id})}" method="post">
+            <div class="form-group">
+                <label for="salvagerName">Your Name *</label>
+                <input type="text" id="salvagerName" name="salvagerName" 
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="salvagerPhone">Your Phone Number *</label>
+                <input type="tel" id="salvagerPhone" name="salvagerPhone" 
+                       placeholder="+49123456789" required>
+            </div>
+
+            <button type="submit" class="btn">Register for Recovery</button>
+        </form>
+
+        <a href="/nets/view" class="back-link">← Back to Nets List</a>
+    </div>
+</body>
+</html>

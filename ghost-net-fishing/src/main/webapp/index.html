@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Net Fishing - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            flex: 1;
+        }
+        .hero {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+        .hero h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: opacity 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .footer {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌊 Ghost Net Fishing</h1>
+        <p>Help protect our oceans by reporting and recovering ghost nets</p>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Welcome to Ghost Net Fishing</h1>
+            <p>Ghost nets are abandoned fishing nets that drift in our oceans, harming marine life. 
+               Together, we can make a difference by reporting and recovering these dangerous nets.</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <h2>📍 Report a Ghost Net</h2>
+                <p>Found a ghost net? Report it here (anonymously if you prefer) to help us track and recover it.</p>
+                <a href="/nets/report" class="btn">Report Net</a>
+            </div>
+
+            <div class="card">
+                <h2>🔍 View Nets to Recover</h2>
+                <p>See all reported ghost nets that need recovery and register to help retrieve them.</p>
+                <a href="/nets/view" class="btn">View Nets</a>
+            </div>
+
+            <div class="card">
+                <h2>✅ My Recoveries</h2>
+                <p>View the ghost nets you've registered to recover and mark them as recovered when done.</p>
+                <a href="/nets/my-recoveries" class="btn">My Recoveries</a>
+            </div>
+
+            <div class="card">
+                <h2>👥 View Assignments</h2>
+                <p>See who is recovering which ghost nets to coordinate efforts and redistribute if needed.</p>
+                <a href="/nets/assignments" class="btn">Assignments</a>
+            </div>
+
+            <div class="card">
+                <h2>🗺️ All Nets</h2>
+                <p>View all ghost nets in the system with their current status.</p>
+                <a href="/nets/all" class="btn">View All</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Ghost Net Fishing - Shea Shepherd Organization</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Ghost Net</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        input[type="number"],
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .anonymous-fields {
+            display: block;
+        }
+        .anonymous-fields.hidden {
+            display: none;
+        }
+        .btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn-secondary {
+            background: #6c757d;
+            margin-top: 10px;
+        }
+        a {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📍 Report a Ghost Net</h1>
+        <p class="subtitle">Help us track ghost nets by providing their location and details</p>
+
+        <div class="info-box">
+            <strong>💡 Tip:</strong> You can report anonymously if you prefer. Just check the box below!
+        </div>
+
+        <form action="/nets/report" method="post">
+            <div class="form-group">
+                <label for="latitude">Latitude *</label>
+                <input type="number" step="0.000001" id="latitude" name="latitude" 
+                       placeholder="e.g., 54.321234" required>
+            </div>
+
+            <div class="form-group">
+                <label for="longitude">Longitude *</label>
+                <input type="number" step="0.000001" id="longitude" name="longitude" 
+                       placeholder="e.g., 13.123456" required>
+            </div>
+
+            <div class="form-group">
+                <label for="estimatedSize">Estimated Size (square meters) *</label>
+                <input type="number" step="0.1" id="estimatedSize" name="estimatedSize" 
+                       placeholder="e.g., 25.5" required>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="anonymous" name="anonymous" value="true" 
+                       onchange="toggleAnonymous()">
+                <label for="anonymous" style="font-weight: normal; margin-bottom: 0;">Report Anonymously</label>
+            </div>
+
+            <div id="reporterFields" class="anonymous-fields">
+                <div class="form-group">
+                    <label for="reporterName">Your Name *</label>
+                    <input type="text" id="reporterName" name="reporterName" 
+                           placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="reporterPhone">Your Phone Number</label>
+                    <input type="tel" id="reporterPhone" name="reporterPhone" 
+                           placeholder="+49123456789">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Submit Report</button>
+            <a href="/">← Back to Home</a>
+        </form>
+    </div>
+
+    <script>
+        function toggleAnonymous() {
+            const checkbox = document.getElementById('anonymous');
+            const fields = document.getElementById('reporterFields');
+            const nameInput = document.getElementById('reporterName');
+            const phoneInput = document.getElementById('reporterPhone');
+            
+            if (checkbox.checked) {
+                fields.classList.add('hidden');
+                nameInput.removeAttribute('required');
+                phoneInput.removeAttribute('required');
+            } else {
+                fields.classList.remove('hidden');
+                nameInput.setAttribute('required', 'required');
+            }
+        }
+    </script>
+</body>
+</html>
