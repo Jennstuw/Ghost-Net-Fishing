@@ -51,7 +51,7 @@ Aktive Bergungszuweisungen anzeigen
 * Thymeleaf templating engine
 * HTML, CSS
 
-### **Build Tools**
+### **Software-Werkzeuge**
 
 * Maven
 * Lombok (optional)
@@ -60,7 +60,7 @@ Aktive Bergungszuweisungen anzeigen
 
 
 
-### Layers:
+### Layers/Schichten:
 
 * **Controller Layer/Controller-Schicht**: Verarbeitet HTTP Anfragen
 * **Service Layer/Service-Schicht**: Beinhaltet die Geschäftslogik
