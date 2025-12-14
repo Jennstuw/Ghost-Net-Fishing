@@ -1,37 +1,38 @@
 
 
-# 🌊 Ghost Net Fishing – Web Application
+# 🌊 Ghost Net Fishing – Web Anwendung
 
-A Java Spring Boot application for reporting, tracking, and recovering abandoned fishing nets ("ghost nets") in the ocean.
+Eine Java Spring Boot-Anwendung zum Melden, Verfolgen und Bergen von ausgesetzten Fischernetzen („Geisternetzen“) im Meer.
+
+## 📖 Projektübersicht
+
+Geisternetze sind ausgesetzte Fischernetze, die im Meer treiben und die marinen Ökosysteme schädigen. Diese Anwendung ermöglicht:
+
+* Personen, Geisternetze anonym oder mit Kontaktdaten zu melden
+• Bergungspersonal, Netze anzuzeigen, zu registrieren und zu bergen
+• Die koordinierte Verfolgung des Bergungsfortschritts
+• Das Anzeigen aller Netze und ihrer Status
 
 
-## 📖 Project Overview
-
-Ghost nets are abandoned fishing nets that drift in the ocean and harm marine ecosystems.
-This application allows:
-
-* People to **report ghost nets** (anonymously or with contact details)
-* Salvaging personnel to **view**, **register**, and **recover** nets
-* Coordinated tracking of recovery progress
-* Viewing all nets and their statuses
-
-This project was developed as part of the *Software Engineering / Web Engineering* module using **Spring Boot**, **JPA**, **MySQL**, and **Thymeleaf**.
+Dieses Projekt wurde im Rahmen des Moduls Software Engineering / Web Engineering unter Verwendung von Spring Boot, JPA, MySQL und Thymeleaf entwickelt.
 
 ---
 
 ## 🚀 Features
 
-### ✅ MUST Requirements
+### ✅ MUSS-Anforderungen (MUST Requirements)
 
-* Report a ghost net (optionally anonymous)
-* View all nets awaiting recovery
-* Salvager can register for recovering a net
-* Salvager can mark a net as recovered
+* Ein Geisternetz melden (optional anonym)
+• Alle Netze anzeigen, die auf die Bergung warten
+• Bergungspersonal kann sich für die Bergung eines Netzes registrieren
+• Bergungspersonal kann ein Netz als geborgen markieren
 
-### 🎯 COULD Requirements
 
-* View active recovery assignments
-* Mark nets as lost (non-anonymous reporting only)
+### 🎯 SOLLTE-Anforderungen (COULD Requirements)
+
+Aktive Bergungszuweisungen anzeigen
+• Netze als verloren markieren (nur bei nicht-anonymer Meldung)
+
 
 ---
 
@@ -61,14 +62,14 @@ This project was developed as part of the *Software Engineering / Web Engineerin
 
 ### Layers:
 
-* **Controller Layer**: Handles HTTP requests
-* **Service Layer**: Business logic
-* **Repository Layer**: Data persistence with JPA
-* **Entity Layer**: Domain model objects
+* **Controller Layer/Controller-Schicht**: Verarbeitet HTTP Anfragen
+* **Service Layer/Service-Schicht**: Beinhaltet die Geschäftslogik
+* **Repository Layer/Repository-Schicht**: Data persistence mit JPA
+* **Entity Layer/Entitäts-Schicht**: Domänenmodell-Objekte
 
 ---
 
-## 🗄 Database Schema (ER Diagram)
+## 🗄 Datenbankschema (ER Diagram)
 
 ```mermaid
 erDiagram
@@ -96,7 +97,7 @@ erDiagram
 
 ---
 
-## 📘 UML Class Diagram
+## 📘 UML Klassendiagramm
 
 ```mermaid
 classDiagram
@@ -142,7 +143,7 @@ classDiagram
 
 ---
 
-## 📈 Sequence Diagram
+## 📈 Sequenzdiagramm
 
 ```mermaid
 sequenceDiagram
@@ -176,7 +177,7 @@ sequenceDiagram
 
 ---
 
-## 🧩 Project Structure
+## 🧩 Projektstruktur
 
 ```
 ghost-net-fishing/
@@ -198,7 +199,7 @@ ghost-net-fishing/
 
 ---
 
-## 🔧 Installation & Setup
+## 🔧 Installation & Einstellungen
 
 ### 1️⃣ Install Requirements
 
@@ -254,18 +255,18 @@ http://localhost:8080
 
 ---
 
-## 🚀 Future Improvements
+## 🚀 Zukünftige Verbesserungen
 
-* Interactive world map (Leaflet / OpenLayers)
-* User authentication system
-* Email/SMS notifications
-* REST API version
-* Admin dashboard for analytics
+* Interaktive Weltkarte (Leaflet/OpenLayers)
+* Benutzerauthentifizierungssystem
+* Email-/SMS- Benachrichtigungen
+* REST-API-Version
+* Admin dashboard für Analysen
 
 ---
 
-## 📄 License
+## 📄 Lizenz
 
-MIT License — free to use and modify.
+MIT Lizenz — zur freien Nutzung und Modifizierung.
 
 
