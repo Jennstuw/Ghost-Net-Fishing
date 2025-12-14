@@ -62,10 +62,10 @@ Aktive Bergungszuweisungen anzeigen
 
 ### Layers/Schichten:
 
-* **Controller Layer/Controller-Schicht**: Verarbeitet HTTP Anfragen
-* **Service Layer/Service-Schicht**: Beinhaltet die Geschäftslogik
-* **Repository Layer/Repository-Schicht**: Data persistence mit JPA
-* **Entity Layer/Entitäts-Schicht**: Domänenmodell-Objekte
+* **Controller Layer/Controller-Schicht**: Verarbeitet eingehende HTTP Anfragen
+* **Service Layer/Service-Schicht**: Beinhaltet die Geschäftslogik der Anwendung (z.B. Überprüfung der Bergungsregeln)
+* **Repository Layer/Repository-Schicht**: Verantwortlich für die Datenpersistenz mit JPA
+* **Entity Layer/Entitäts-Schicht**: Definiert die Domänenmodell-Objekte (z.B. Person und GhostNet)
 
 ---
 
@@ -257,7 +257,7 @@ http://localhost:8080
 
 ## 🚀 Zukünftige Verbesserungen
 
-* Interaktive Weltkarte (Leaflet/OpenLayers)
+* Interaktive Weltkarte (mit Leaflet/OpenLayers)
 * Benutzerauthentifizierungssystem
 * Email-/SMS- Benachrichtigungen
 * REST-API-Version
