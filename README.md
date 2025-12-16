@@ -8,7 +8,7 @@ Eine Java Spring Boot-Anwendung zum Melden, Verfolgen und Bergen von ausgesetzte
 
 Geisternetze sind ausgesetzte Fischernetze, die im Meer treiben und die marinen Ökosysteme schädigen. Diese Anwendung ermöglicht:
 
-* Personen, Geisternetze anonym oder mit Kontaktdaten zu melden
+• Personen, Geisternetze anonym oder mit Kontaktdaten zu melden
   
 • Bergungspersonal, Netze anzuzeigen, zu registrieren und zu bergen
 
@@ -25,7 +25,7 @@ Dieses Projekt wurde im Rahmen des Moduls Software Engineering / Web Engineering
 
 ### ✅ MUSS-Anforderungen (MUST Requirements)
 
-* Ein Geisternetz melden (optional anonym)
+• Ein Geisternetz melden (optional anonym)
 • Alle Netze anzeigen, die auf die Bergung warten
 • Bergungspersonal kann sich für die Bergung eines Netzes registrieren
 • Bergungspersonal kann ein Netz als geborgen markieren
