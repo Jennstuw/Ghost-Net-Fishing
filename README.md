@@ -221,7 +221,7 @@ FLUSH PRIVILEGES;
 
 ---
 
-## ▶️ How to Run the Project/ Wie man das Projekt ausführt 
+## ▶️ How to Run the Project/Wie man das Projekt ausführt 
 
 ### **Step 1: Build**
 
@@ -229,7 +229,7 @@ FLUSH PRIVILEGES;
 mvn clean install
 ```
 
-### **Step 2: Run/ Ausführen**
+### **Step 2: Run/Ausführen**
 
 ```
 mvn spring-boot:run
