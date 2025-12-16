@@ -9,8 +9,11 @@ Eine Java Spring Boot-Anwendung zum Melden, Verfolgen und Bergen von ausgesetzte
 Geisternetze sind ausgesetzte Fischernetze, die im Meer treiben und die marinen Ökosysteme schädigen. Diese Anwendung ermöglicht:
 
 * Personen, Geisternetze anonym oder mit Kontaktdaten zu melden
+  
 • Bergungspersonal, Netze anzuzeigen, zu registrieren und zu bergen
+
 • Die koordinierte Verfolgung des Bergungsfortschritts
+
 • Das Anzeigen aller Netze und ihrer Status
 
 
@@ -218,7 +221,7 @@ FLUSH PRIVILEGES;
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ How to Run the Project/ Wie man das Projekt ausführt 
 
 ### **Step 1: Build**
 
@@ -226,7 +229,7 @@ FLUSH PRIVILEGES;
 mvn clean install
 ```
 
-### **Step 2: Run**
+### **Step 2: Run/ Ausführen**
 
 ```
 mvn spring-boot:run
